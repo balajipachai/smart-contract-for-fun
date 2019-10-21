@@ -5,7 +5,7 @@ const chai = require('chai')
 const assert = chai.assert;
 const Fibonacci = artifacts.require('Fibonacci');
 
-contract('Fibonacci test suite', accounts => {
+contract.only('Fibonacci test suite', accounts => {
   const COINBASE = accounts[0];
   const GASLIMIT = 8000000;
   let fibonacciContractInstance;
@@ -87,10 +87,15 @@ contract('Fibonacci test suite', accounts => {
       it('print the calculated fibo series', () => {
         console.log('\t', result);
       });
-      it('should check the calculated series to be [ 1, 1, 2, 3, 5, 8 ]', () => {
+      it('should check the calculated series to be [ 1, 1, 2, 3, 5, 8 ]', async () => {
+        let fiboSeries = await fibonacciContractInstance.getFiboSeries.call();
+        let fiboSeriesConvertedToNumber = [];
+        for (let index = 0; index < fiboSeries.length; index++) {
+          fiboSeriesConvertedToNumber.push(fiboSeries[index].toNumber());
+        }
         assert.deepEqual(
           result,
-          [1, 1, 2, 3, 5, 8],
+          fiboSeriesConvertedToNumber,
           'Fibo series do not match.'
         );
       });

@@ -5,7 +5,7 @@ pragma solidity >0.4.23 <0.7.0;
 /// @notice Given 'n' calculate the nth Fibonacci number
 contract Fibonacci {
     mapping (uint=>uint) public nthFiboNumber;
-
+    uint[] public fiboSeries;
     event NewFibonacciCalculated(uint number, uint timestamp);
     
     /// Fallback function
@@ -18,6 +18,8 @@ contract Fibonacci {
         // For n = 0 or n = 1
         nthFiboNumber[0] = 1;
         nthFiboNumber[1] = 1;
+        fiboSeries.push(nthFiboNumber[0]);
+        fiboSeries.push(nthFiboNumber[1]);
     }
 
     /// @dev Function that calculates the fibonacci series
@@ -28,9 +30,15 @@ contract Fibonacci {
         if (nthFiboNumber[_n] == 0) {
             nthFiboNumber[_n] = (fibo(_n - 1) + fibo(_n - 2));
             emit NewFibonacciCalculated(nthFiboNumber[_n], now);
+            fiboSeries.push(nthFiboNumber[_n]);
             return nthFiboNumber[_n];
         } else {
             return nthFiboNumber[_n];
         }
+    }
+
+    /// @dev Function that gets the fibonacci series
+    function getFiboSeries() public view returns (uint[] memory) {
+        return fiboSeries;
     }
 }
