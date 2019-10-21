@@ -5,7 +5,7 @@ const chai = require('chai')
 const assert = chai.assert;
 const Fibonacci = artifacts.require('Fibonacci');
 
-contract.only('Fibonacci test suite', accounts => {
+contract('Fibonacci test suite', accounts => {
   const COINBASE = accounts[0];
   const GASLIMIT = 8000000;
   let fibonacciContractInstance;
