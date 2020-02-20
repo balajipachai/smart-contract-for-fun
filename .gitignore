@@ -2,3 +2,6 @@ node_modules
 truffle/blockchain_games/build
 truffle/oasis-gaming-hackathon/build
 truffle/solidity-readthe-docs/build
+buidler/node_modules
+buidler/cache
+buidler/artifacts

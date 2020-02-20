@@ -1,0 +1,35 @@
+{
+  "name": "buidler",
+  "version": "1.0.0",
+  "description": "Smart Contract Development using buidler (nomiclabs/taskrunner)",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx buidler test",
+    "compile": "npx buidler compile",
+    "deploy": "npx buidler run scripts/deploy.js"
+  },
+  "keywords": [
+    "Solidity",
+    "Ethereum",
+    "Buidler",
+    "TaskRunner",
+    "Learning",
+    "BlockchainDevelopment"
+  ],
+  "author": "Balaji Shetty Pachai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/balajipachai/project-template-blockchain/issues"
+  },
+  "homepage": "https://github.com/balajipachai/project-template-blockchain#readme",
+  "devDependencies": {
+    "@nomiclabs/buidler": "^1.1.2",
+    "@nomiclabs/buidler-truffle5": "^1.1.2",
+    "@nomiclabs/buidler-web3": "^1.1.2",
+    "@openzeppelin/test-helpers": "^0.5.4",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "web3": "^1.2.6"
+  }
+}
