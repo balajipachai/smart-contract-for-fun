@@ -64,6 +64,10 @@ contract("Copyright", accounts => {
                 receipt = await copyrighConInstance.storeCopyrightDetails(copyrightOwner, timestamp, copyrightHash, {from: approvers[0]});
                 assert.equal(receipt.receipt.status, true, 'Store copyright details failed');
             })
+
+            it('reverts when trying to copyright already copyrighted', async () => {
+                expectRevert(copyrighConInstance.storeCopyrightDetails(copyrightOwner, timestamp, copyrightHash, {from: approvers[0]}), 'Already Copyrighted.')
+            })
             it('emits a LogStoreCopyright event on successful copyright storage', async () => {
                 expectEvent(receipt, 'LogStoreCopyright', {
                     _owner: copyrightOwner,
