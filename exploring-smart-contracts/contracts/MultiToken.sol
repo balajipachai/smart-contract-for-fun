@@ -1,10 +1,10 @@
-pragma solidity 0.5.12;
-
+pragma solidity 0.6.4;
 
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20Mintable.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20Burnable.sol";
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
+
 
 /// @title MultiToken
 /// @author Balaji Shetty Pachai
