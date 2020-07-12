@@ -1,0 +1,40 @@
+{
+  "name": "exploring-smart-contracts",
+  "version": "0.0.1",
+  "description": "Exploring smart contracts",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "migrate": "truffle migrate --reset",
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balajipachai/smart-contract-for-fun.git"
+  },
+  "keywords": [
+    "Solidity",
+    "Truffle",
+    "TDD",
+    "Ethereum"
+  ],
+  "author": "Balaji Shetty Pachai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/balajipachai/smart-contract-for-fun/issues"
+  },
+  "homepage": "https://github.com/balajipachai/smart-contract-for-fun#readme",
+  "dependencies": {
+    "@openzeppelin/test-helpers": "^0.5.3",
+    "bignumber.js": "^9.0.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^3.0.0",
+    "left-pad": "^1.3.0",
+    "openzeppelin-solidity": "^2.4.0",
+    "web3": "^1.2.2"
+  }
+}
