@@ -7,3 +7,7 @@
 `solidity-readthe-docs`
 
 Reference: https://solidity.readthedocs.io/en/v0.5.11/index.html
+
+# For contracts in Vyper Language please refer vyper directory
+
+Reference: https://vyper.readthedocs.io/en/stable/vyper-by-example.html
