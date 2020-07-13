@@ -4,9 +4,9 @@ INITIAL_VALUE = 4
 
 
 @pytest.fixture
-def storage_contract(Storage, accounts):
+def storage_contract(SimpleStorage, accounts):
     # Deploy the contract with the initial value as a constructor argument
-    yield Storage.deploy(INITIAL_VALUE, {'from': accounts[0]})
+    yield SimpleStorage.deploy(INITIAL_VALUE, {'from': accounts[0]})
 
 
 def test_initial_state(storage_contract):
