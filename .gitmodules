@@ -4,3 +4,6 @@
 [submodule "foundry/nft-using-solmate/lib/solmate"]
 	path = foundry/nft-using-solmate/lib/solmate
 	url = https://github.com/transmissions11/solmate
+[submodule "foundry/nft-using-solmate/lib/openzeppelin-contracts"]
+	path = foundry/nft-using-solmate/lib/openzeppelin-contracts
+	url = https://github.com/Openzeppelin/openzeppelin-contracts
