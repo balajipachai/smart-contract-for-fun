@@ -1,0 +1,3 @@
+[submodule "foundry/nft-using-solmate/lib/forge-std"]
+	path = foundry/nft-using-solmate/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
