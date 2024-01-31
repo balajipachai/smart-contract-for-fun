@@ -9,11 +9,12 @@ error MintPriceNotPaid();
 error MaxSupply();
 error NonExistentTokenURI();
 error WithdrawTransfer();
+error OwnableUnauthorizedAccount(address account);
 
 contract NFT is ERC721, Ownable {
     using Strings for uint256;
     string public baseURI;
-    uint256 public currentTokenId = 0;
+    uint256 public currentTokenId;
     uint256 public constant TOTAL_SUPPLY = 10_000;
     uint256 public constant MINT_PRICE = 0.08 ether;
 
@@ -30,7 +31,7 @@ contract NFT is ERC721, Ownable {
         if (msg.value != MINT_PRICE) {
             revert MintPriceNotPaid();
         }
-        uint256 newTokenId = currentTokenId++;
+        uint256 newTokenId = ++currentTokenId;
         if (newTokenId > TOTAL_SUPPLY) {
             revert MaxSupply();
         }
