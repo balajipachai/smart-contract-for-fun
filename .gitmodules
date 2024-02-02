@@ -7,3 +7,6 @@
 [submodule "foundry/nft-using-solmate/lib/openzeppelin-contracts"]
 	path = foundry/nft-using-solmate/lib/openzeppelin-contracts
 	url = https://github.com/Openzeppelin/openzeppelin-contracts
+[submodule "foundry/techfund-challenge/lib/forge-std"]
+	path = foundry/techfund-challenge/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
